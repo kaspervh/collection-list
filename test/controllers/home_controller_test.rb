@@ -5,4 +5,5 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     get home_index_url
     assert_response :success
   end
+
 end
