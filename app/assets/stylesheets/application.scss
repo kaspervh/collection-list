@@ -9,3 +9,10 @@
  * Consider organizing styles into separate files for maintainability.
  */
 @import "bootstrap";
+
+.column{
+	display: flex;
+	flex-direction: column; 
+	justify-content: center;
+	align-items:center;
+}
