@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
+  <div class="column">
+    <%= form.text_field :email, placeholder: 'Email'%>
+    <br>
 
-  <div>
-    <%= form.label :password_digest, style: "display: block" %>
-    <%= form.text_field :password_digest %>
-  </div>
+    <%= form.password_field :password_digest, placeholder: 'Password' %>
 
-  <div>
+    <br>
+    <%= form.password_field :password_confirmation, placeholder: 'Confirm password' %>
+  
+    <br>
+  
     <%= form.submit %>
   </div>
 <% end %>
