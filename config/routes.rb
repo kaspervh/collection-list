@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :items
+  resources :lists
   get 'login' => "session#new"
   post 'session/create'
   get 'logout' => "session#destroy"
