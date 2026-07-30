@@ -3,5 +3,5 @@ class User < ApplicationRecord
 	validates :email, presence: true, uniqueness: true
 	validates :password_digest, presence: true, length: {minimum: 6}, on: :create
 
-
+	has_many: lists
 end
