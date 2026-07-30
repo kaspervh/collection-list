@@ -39,7 +39,7 @@
             <%if current_user%>
 
               <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <%= link_to 'Log out', logout_path, class: 'nav-link active' %>
               </li>
             <%else%>
               <li>
