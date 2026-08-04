@@ -1,3 +1,9 @@
 <div class="container">
-  <%= render @lists  %>
+
+	<%if @lists.any? %>
+  		<%= render @lists  %>
+  	<%else  %>
+  		<h1>No lists have been generatd yet, please start one</h1>
+  	<% end %>
+  	<%=  link_to 'New List', new_list_path, class: 'btn btn-secondary'%>
 </div>

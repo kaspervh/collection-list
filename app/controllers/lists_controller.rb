@@ -1,25 +1,20 @@
 class ListsController < ApplicationController
   before_action :set_list, only: %i[ show edit update destroy ]
 
-  # GET /lists or /lists.json
   def index
-    @lists = List.all
+    @lists = current_user.lists.all
   end
 
-  # GET /lists/1 or /lists/1.json
   def show
   end
 
-  # GET /lists/new
   def new
     @list = List.new
   end
-
-  # GET /lists/1/edit
+ 
   def edit
   end
 
-  # POST /lists or /lists.json
   def create
     @list = List.new(list_params)
 
@@ -34,7 +29,6 @@ class ListsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /lists/1 or /lists/1.json
   def update
     respond_to do |format|
       if @list.update(list_params)
@@ -47,7 +41,6 @@ class ListsController < ApplicationController
     end
   end
 
-  # DELETE /lists/1 or /lists/1.json
   def destroy
     @list.destroy!
 
